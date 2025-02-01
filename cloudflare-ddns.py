@@ -73,7 +73,7 @@ def getIPs():
             # Try secondary IP check
             try:
                 a = requests.get(
-                    "https://1.0.0.1/cdn-cgi/trace").text.split("\n")
+                    "https://104.16.132.229/cdn-cgi/trace").text.split("\n")
                 a.pop()
                 a = dict(s.split("=") for s in a)["ip"]
             except Exception:
